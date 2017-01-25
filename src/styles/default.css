@@ -86,8 +86,12 @@ body, html {
 
 
 
-.accordion__item-tittle:active {
-	background: #ff8663;
+
+
+.accordion__item-tittle:active:after {
+	transform: rotate(180deg);
+	border-color: #fff transparent;
+	transition: all 0.2s ease;
 }
 
 .accordion__item-content {
@@ -100,11 +104,17 @@ body, html {
 }
 
 
-
 .accordion__item_open .accordion__item-tittle {
 	background: #ff8663;
 	color: #fff;
 	position: relative;
+	z-index: 1000;
+}
+
+.accordion__item_open .accordion__item-tittle:after {
+	transform: rotate(180deg);
+	border-color: #fff transparent;
+	transition: all 0.2s ease;
 	z-index: 1000;
 }
 
