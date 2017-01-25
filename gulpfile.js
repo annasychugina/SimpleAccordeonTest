@@ -6,6 +6,7 @@ var gulp = require("gulp"),
 	del	= require("del"),
 	autoprefixer = require("autoprefixer"),
 	postcss = require("gulp-postcss"),
+	jshint = require('gulp-jshint'),
 	imagemin = require("gulp-imagemin");
 
 gulp.task('start', function() {
@@ -33,9 +34,15 @@ gulp.task("fonts", function() {
 
 gulp.task("scripts", function() {
 	return gulp.src("src/scripts/**/*")
-		.pipe(concat("chart.js"))
+		.pipe(concat("min.js"))
 		.pipe(gulp.dest("public/scripts"))
 		.pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('lint', function() {
+	return gulp.src('src/scripts/**/*.js')
+		.pipe(jshint())
+		.pipe(jshint.reporter('jshint-stylish'));
 });
 
 gulp.task("html", function() {
@@ -59,14 +66,13 @@ gulp.task("browser-sync", function() {
 	});
 });
 
-
 gulp.task("watch", ["browser-sync", "css", "html", "scripts"], function() {
 	gulp.watch("src/styles/**/*.css", ["styles"]);
 	gulp.watch("src/*.html", ["html"]);
 	gulp.watch("src/scripts/**/*.js", ["js"]);
 });
 
-gulp.task("build", ["clean", "css", "fonts", "scripts", "html", "img"], function() {
+gulp.task("build", ["clean", "css", "fonts", "scripts", "html", "img", "lint"], function() {
 	return gulp.src("src/styles/*min.css")
 		.pipe(gulp.dest("public/styles"));
 });

@@ -1,6 +1,10 @@
 body {
-	font: 20px/22px Helvetica, Arial, sens-serif;
+	font: 20px/22px "FiraSansLight", Arial, sens-serif;
 	background-color: #fff;
+}
+
+head {
+	font-size: 16px;
 }
 
 .accordion__container {
