@@ -1,0 +1,35 @@
+{
+  "name": "accordeon",
+  "version": "1.0.0",
+  "description": "test loftschool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sychuginaanna/SimpleAccordeonTest.git"
+  },
+  "author": "Anna Sychugina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sychuginaanna/SimpleAccordeonTest/issues"
+  },
+  "homepage": "https://github.com/sychuginaanna/SimpleAccordeonTest#readme",
+  "dependencies": {
+    "autoprefixer": "^6.6.0",
+    "browser-sync": "^2.18.5",
+    "cssnano": "^3.9.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^6.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "cssnano": "^3.9.1",
+    "del": "^2.2.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglifyjs": "^0.6.2"
+  }
+}
