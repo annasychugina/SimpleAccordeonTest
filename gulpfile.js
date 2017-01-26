@@ -69,7 +69,7 @@ gulp.task("browser-sync", function() {
 gulp.task("watch", ["browser-sync", "css", "html", "scripts"], function() {
 	gulp.watch("src/styles/**/*.css", ["css"]);
 	gulp.watch("src/*.html", ["html"]);
-	gulp.watch("src/scripts/**/*.js", ["js"]);
+	gulp.watch("src/scripts/**/*.js", ["scripts"]);
 });
 
 gulp.task("build", ["clean", "css", "fonts", "scripts", "html", "img", "lint"], function() {
