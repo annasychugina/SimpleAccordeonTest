@@ -1,6 +1,6 @@
 var triggers = document.querySelectorAll('.accordion__item-tittle');
 
-var accordeon = function (e) {
+var accordion = function (e) {
 	var elem = e.target;
 	var parent = elem.closest('.accordion__item');
 	var items = document.querySelectorAll('.accordion__item');
@@ -14,5 +14,5 @@ var accordeon = function (e) {
 };
 
 for (var trigger of triggers) {
-	trigger.addEventListener('click', accordeon);
+	trigger.addEventListener('click', accordion);
 }
