@@ -15,11 +15,11 @@ body, html {
 	text-align: center;
 }
 
-.accordion__container {
+.accordion {
 	margin-top: 5%;
 }
 
-.accordion {
+.accordion__container {
 	margin: auto;
 	padding: 0px;
 	max-width: 460px;
@@ -117,7 +117,7 @@ body, html {
 	margin: 10px 0;
 }
 
-.accordion__item-cell._link {
+.accordion__item-link {
 	margin: 0;
 	text-decoration: none;
 }
